@@ -1,0 +1,88 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ✅ Ensures the entire page takes up full height & removes default margins */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  gap: 4px;
+
+   /* ✅ Makes it fill the full screen */
+   width: 100vw;
+   height: 100vh;  
+}
+  
+.div1 {
+  grid-column: span 12 / span 12;
+  grid-row: span 2 / span 2;
+}
+
+.div2 {
+  grid-column: span 12 / span 12;
+  grid-row: span 4 / span 4;
+  grid-row-start: 4;
+}
+
+.div4 {
+  grid-column: span 12 / span 12;
+  grid-row: span 2 / span 2;
+  grid-column-start: 1;
+  grid-row-start: 11;
+}
+
+.div5 {
+  grid-column: span 5 / span 5;
+  grid-column-start: 1;
+  grid-row-start: 9;
+}
+
+.div6 {
+  grid-column: span 4 / span 4;
+  grid-column-start: 9;
+  grid-row-start: 9;
+}
+      
+
